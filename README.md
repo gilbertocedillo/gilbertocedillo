@@ -37,6 +37,12 @@ I build the projects below to turn that lab experience into engineering evidence
 | [**aws-cloud-detection-ir**](https://github.com/gilbertocedillo/aws-cloud-detection-ir) | AWS control-plane detection: CloudTrail/Athena queries + a Python analyzer (7 detections, 0 false positives), a vulnerable-vs-secure Terraform pair scanned by a mini-Checkov (**9 findings → 0**), remediation Lambdas, and IR runbooks |
 | [**cloud-honeypot-cowrie-mitre**](https://github.com/gilbertocedillo/cloud-honeypot-cowrie-mitre) | Cowrie SSH honeypot on EC2: real attacker sessions enriched with VirusTotal, mapped to MITRE ATT&CK by an AI agent, and malicious IPs auto-blocked via NACL/WAF |
 
+### 🌐 Network security
+
+| Project | What it proves |
+|---|---|
+| [**network-firewall-hardening-lab**](https://github.com/gilbertocedillo/network-firewall-hardening-lab) | A stateful, zone-based Linux firewall (WAN/DMZ/LAN, default-deny) written in **both iptables and nftables**: NAT/DNAT to a DMZ web server, anti-spoofing, SYN-flood and SSH brute-force protection, structured logging — plus a single-machine namespace lab, Nmap attack tests, and a Python log analyzer that detects port scans and SSH brute force (MITRE T1046 / T1110.001), **10/10 tests passing** |
+
 ### ⚙️ DevSecOps & AI security
 
 | Project | What it proves |
@@ -47,7 +53,7 @@ I build the projects below to turn that lab experience into engineering evidence
 ## Toolbox
 
 - **SIEM & Detection:** Splunk (SPL), Elastic, Sigma, Sysmon, MITRE ATT&CK, Cyber Kill Chain, NIST CSF / SP 800-61
-- **Network & Tools:** Wireshark, Snort, Nmap, Semgrep, TruffleHog, Checkov, VirusTotal
+- **Network & Tools:** Wireshark, Snort, Nmap, iptables, nftables, Semgrep, TruffleHog, Checkov, VirusTotal
 - **Cloud & IaC:** AWS (EC2, IAM, Security Groups, Lambda, CloudWatch, CloudTrail, GuardDuty, Athena, S3), Terraform
 - **Systems & Scripting:** Windows / Active Directory, Linux, Python, SQL, Bash, PowerShell, Git & GitHub Actions, n8n
 
